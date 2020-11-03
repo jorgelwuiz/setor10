@@ -19,23 +19,25 @@ Route::get('/', function()
     });
 
 Route::group(['middleware' => 'auth'], function (){
-    
-    Route::get('/cadastro-geral-usuario', 'CadastrosController@index');    
+
+    Route::get('/dashboard', 'DashboardController@index');
+
+    Route::get('/cadastro-geral-usuario', 'CadastrosController@index');
     Route::get('deletar/cadastro/geral/{id}','CadastrosController@destroy');
-    Route::get('editar/cadastro/geral/', 'CadastrosController@indexEditar');    
+    Route::get('editar/cadastro/geral/', 'CadastrosController@indexEditar');
     Route::post('editar/cadastro/geral/{id}','CadastrosController@update');
 
 
-    Route::get('/chamadas/congresso-de-mulheres', 'CadastrosController@indexMulheres')->name('presencas.mulheres.confirmar');    
+    Route::get('/chamadas/congresso-de-mulheres', 'CadastrosController@indexMulheres')->name('presencas.mulheres.confirmar');
     Route::post('confirmarpresenca', 'presencasController@store');
-    
-    
-    
+
+
+
     //Metodo create, cadastrar, atualiza e deletar.
     Route::get('/cadastrar', 'CadastrosController@create');
     Route::post('/cadastrar/pessoa', 'CadastrosController@store');
 
-    
+
 });
 
 
