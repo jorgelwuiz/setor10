@@ -2,7 +2,7 @@
     <a href="index3.html" class="brand-link">
         <img src="adminlte/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
             style="opacity: .8">
-        <span class="brand-text font-weight-light">IEADPE - Jaboatão</span>
+        <span class="brand-text font-weight-light">IEADPE</span>
     </a>
 
     <div class="sidebar">
