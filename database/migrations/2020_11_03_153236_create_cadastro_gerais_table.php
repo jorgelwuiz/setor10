@@ -27,7 +27,7 @@ class CreateCadastroGeraisTable extends Migration
             $table->string('Endereco')->nullable();                                    
             $table->string('observacoes')->nullable(); 
             $table->timestamps();
-        });
+        });;
     }
 
     /**

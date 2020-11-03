@@ -1,7 +1,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 3 | Dashboard</title>
+    <title>Jaboatão | Setor 10</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
