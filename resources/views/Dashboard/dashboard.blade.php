@@ -14,9 +14,8 @@
                             </ol>
                         </div>
                     </div>
-                </div>
-            </section>
-
+                </div>                                                                                       
+            </section>                                  
             <section class="content">
                 <div class="card">
                     <div class="card-header">

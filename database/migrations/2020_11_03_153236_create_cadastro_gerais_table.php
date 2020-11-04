@@ -22,9 +22,9 @@ class CreateCadastroGeraisTable extends Migration
             $table->unsignedBigInteger('funcao_eclesiastica_id')->nullable();
             $table->foreign('funcao_eclesiastica_id')->references('id')->on('funcao_eclesiasticas');       
             $table->string('nome'); 
-            $table->string('Contato')->nullable();                                  
+            $table->string('contato')->nullable();                                  
             $table->string('numero_cartao_membro')->unique(); 
-            $table->string('Endereco')->nullable();                                    
+            $table->string('endereco')->nullable();                                    
             $table->string('observacoes')->nullable(); 
             $table->timestamps();
         });;

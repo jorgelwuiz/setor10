@@ -21,6 +21,7 @@ Route::get('/', function()
 Route::group(['middleware' => 'auth'], function (){
 
     Route::get('/dashboard', 'DashboardController@index');
+    
 
     Route::get('/cadastro-geral-usuario', 'CadastrosController@index');
     Route::get('deletar/cadastro/geral/{id}','CadastrosController@destroy');

@@ -4,7 +4,6 @@
             style="opacity: .8">
         <span class="brand-text font-weight-light">IEADPE</span>
     </a>
-
     <div class="sidebar">
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
@@ -14,19 +13,35 @@
                 <a href="#" class="d-block">Alexander Pierce</a>
             </div>
         </div>
-
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item has-treeview menu-open">
                     <a href="#" class="nav-link active">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                            Painel de Controle
+                            PAINEL DE CONTROLE
                         </p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/gallery.html" class="nav-link">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-edit"></i>
+                        <p>
+                            Cadastro Geral
+                            <i class="right fas fa-angle-left"></i>                            
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Listagem</p>
+                            </a>
+                        </li>                        
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon far fa-user"></i>
                         <p>
                             Usuários
@@ -34,98 +49,144 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/gallery.html" class="nav-link">
-                        <i class="nav-icon far fa-image"></i>
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-book"></i>
                         <p>
                             Eventos
                         </p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/gallery.html" class="nav-link">
-                        <i class="nav-icon far fa-image"></i>
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-book"></i>
                         <p>
                             Áreas
                         </p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/gallery.html" class="nav-link">
-                        <i class="nav-icon far fa-image"></i>
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-book"></i>
                         <p>
                             Congregações
                         </p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/gallery.html" class="nav-link">
-                        <i class="nav-icon far fa-image"></i>
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-book"></i>
                         <p>
                             Função Eclesiastica
                         </p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/gallery.html" class="nav-link">
-                        <i class="nav-icon far fa-image"></i>
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-book"></i>
                         <p>
                             Áreas
                         </p>
                     </a>
+                </li>        
+                <li class="nav-header">                   
+                        REGISTRO DE FREQUENCIAS
                 </li>
-                {{-- <li class="nav-item has-treeview">
+                <li class="nav-item">
                     <a href="#" class="nav-link">
-                    <i class="nav-icon fas fa-copy"></i>
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Doutrina</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#g" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Escola Dominical</p>
+                    </a>
+                </li>                
+                <!--Congressos-->
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-circle"></i>
                     <p>
-                        Layout Options
-                        <i class="fas fa-angle-left right"></i>
+                        Congressos
+                        <i class="right fas fa-angle-left"></i>
                     </p>
                     </a>
                     <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                        <a href="pages/layout/top-nav.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Top Navigation</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Top Navigation + Sidebar</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="pages/layout/boxed.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Boxed</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="pages/layout/fixed-sidebar.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Fixed Sidebar</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="pages/layout/fixed-topnav.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Fixed Navbar</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="pages/layout/fixed-footer.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Fixed Footer</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Collapsed Sidebar</p>
-                        </a>
-                    </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                            <i class="far fa-dot-circle nav-icon"></i>
+                            <p>Mulheres</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                            <i class="far fa-dot-circle nav-icon"></i>
+                            <p>Jovens</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                            <i class="far fa-dot-circle nav-icon"></i>
+                            <p>Adolescentes</p>
+                            </a>
+                        </li>                
                     </ul>
-                </li> --}}
+                </li>
+                <!--Reuniões-->
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-circle"></i>
+                        <p>
+                            Reuniões
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                            <i class="far fa-dot-circle nav-icon"></i>
+                            <p>Geral Obreiros</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                            <i class="far fa-dot-circle nav-icon"></i>
+                            <p>Coa</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                            <i class="far fa-dot-circle nav-icon"></i>
+                            <p>Coi</p>
+                            </a>
+                        </li>  
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                            <i class="far fa-dot-circle nav-icon"></i>
+                            <p>Campanhas</p>
+                            </a>
+                        </li> 
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                            <i class="far fa-dot-circle nav-icon"></i>
+                            <p>Uniões</p>
+                            </a>
+                        </li> 
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                            <i class="far fa-dot-circle nav-icon"></i>
+                            <p>Preletores</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                            <i class="far fa-dot-circle nav-icon"></i>
+                            <p>Proati</p>
+                            </a>
+                        </li>              
+                    </ul>
+                </li>                 
             </ul>
         </nav>
     </div>
