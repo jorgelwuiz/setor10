@@ -9,8 +9,8 @@
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
-                                <li class="breadcrumb-item active">Blank Page</li>
+                                <li class="breadcrumb-item"><a href="/dashboard">Inicio</a></li>
+                                <li class="breadcrumb-item active">Paginas</li>                                
                             </ol>
                         </div>
                     </div>
@@ -25,13 +25,13 @@
                       <div class="card-body">
                         <table id="example1" class="table table-bordered table-striped dataTable dtr-inline">
                           <thead>
-                          <tr>
-                            <th>Rendering engine</th>
-                            <th>Browser</th>
-                            <th>Platform(s)</th>
-                            <th>Engine version</th>
-                            <th>CSS grade</th>
-                          </tr>
+                            <tr>
+                              <th>Rendering engine</th>
+                              <th>Browser</th>
+                              <th>Platform(s)</th>
+                              <th>Engine version</th>
+                              <th>CSS grade</th>
+                            </tr>
                           </thead>
                           <tbody>
                           <tr>
