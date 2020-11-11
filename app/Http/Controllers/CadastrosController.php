@@ -29,7 +29,7 @@ class CadastrosController extends Controller
         $areas = areas::all();
         $eventos = eventos::all();
 
-        return view('CadastroGeral', compact('cadastros','congregacoes','areas','funcao_eclesiasticas','eventos'));
+        return view('Admin//CadastroGeral', compact('cadastros','congregacoes','areas','funcao_eclesiasticas','eventos'));
     }
 
     //Index chamada Mulheres     
@@ -55,7 +55,7 @@ class CadastrosController extends Controller
         $areas = areas::all();
         $eventos = eventos::all();
 
-        return view('EditarCadastroGeral', compact('cadastros','congregacoes','areas','eventos'));
+        return view('/Admin/EditarCadastroGeral', compact('cadastros','congregacoes','areas','eventos'));
     }
 
     /**
@@ -67,11 +67,11 @@ class CadastrosController extends Controller
     {
 
         $areas = areas::all();
-        $congregacoes =  db::table('congregacoes')->orderBy('congregacao_id')->get();
+        $congregacoes =  db::table('congregacoes')->orderBy('congregacao')->get();
         $funcao_eclesiasticas = funcao_eclesiasticas::all();
         $eventos = eventos::all();
 
-        return view('create',compact('areas','congregacoes','funcao_eclesiasticas','eventos'));
+        return view('/Admin/create',compact('areas','congregacoes','funcao_eclesiasticas','eventos'));
     }
 
     /**

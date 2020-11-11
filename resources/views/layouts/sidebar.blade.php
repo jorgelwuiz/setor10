@@ -16,7 +16,7 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item has-treeview menu-open">
-                    <a href="#" class="nav-link active">
+                    <a href="/dashboard" class="nav-link active">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             PAINEL DE CONTROLE
@@ -33,9 +33,17 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="/listagem" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Listagem</p>
+                            </a>
+                        </li>                        
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/cadastrar-usuario" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Cadastrar</p>
                             </a>
                         </li>                        
                     </ul>
