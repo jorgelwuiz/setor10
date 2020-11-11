@@ -2,32 +2,29 @@
     @section('content')
         <div class="content-wrapper">
             <section class="content-header">
-                <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <h1>Dashboard</h1>
-                        </div>
-                        <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="/dashboard">Inicio</a></li>
-                                <li class="breadcrumb-item active">Paginas</li>          
-                                <li class="dropdown dropdown-extended quick-sidebar-toggler">                          
-                                  <ul>
-                                    <a  class="btn btn-primary btn-sm" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                        Sair
-                                    </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                                        @csrf
-                                    </form>                          
-                                  </ul>
-                              </li>                                                                                                    
-                            </ol>
-                        </div>
-                        <div>
-                        
-                      </div>
-                    </div>
-                </div>                                                                                       
+              <div class="container-fluid">
+                <div class="row mb-2">
+                  <div class="col-sm-6">
+                      <h1>Dashboard</h1>
+                  </div>
+                  <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                      <li class="breadcrumb-item"><a href="/dashboard">Inicio</a></li>
+                      <li class="breadcrumb-item active">Paginas</li>          
+                      <li class="dropdown dropdown-extended quick-sidebar-toggler">                          
+                        <ul>
+                          <a  class="btn btn-primary btn-sm" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                              Sair
+                          </a>
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                              @csrf
+                          </form>                          
+                        </ul>
+                      </li>                                                                                                    
+                    </ol>                          
+                  <div>                        
+                </div>                    
+              </div>                                                                                       
             </section>                                  
             <section class="content">
                 <div class="card">
