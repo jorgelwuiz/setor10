@@ -13,12 +13,12 @@
                                 <li class="breadcrumb-item active">Paginas</li>          
                                 <li class="dropdown dropdown-extended quick-sidebar-toggler">                          
                                   <ul>
-                                  <a class="btn btn-primary btn-sm" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                      Sair
-                                  </a>
-                                  <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                                      @csrf
-                                  </form>                          
+                                    <a class="btn btn-primary btn-sm" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        Sair
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                        @csrf
+                                    </form>                          
                                   </ul>
                               </li>                                                                                                    
                             </ol>
