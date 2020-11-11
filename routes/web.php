@@ -21,6 +21,7 @@ Route::get('/', function()
 Route::group(['middleware' => 'auth'], function (){
 
     Route::get('/dashboard', 'DashboardController@index');
+    Route::post('/auth/logout', 'Auth\AuthController@logout');
     
 
     Route::get('/cadastro-geral-usuario', 'CadastrosController@index');
