@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\cadastro_gerais;
+use App\congregacoes;
+use App\funcao_eclesiasticas;
+
 class ListagemController extends Controller
 {
     /**
@@ -13,8 +17,11 @@ class ListagemController extends Controller
      */
     public function index()
     {
-        return view('/Admin/listagem');
+        $cadastros = cadastro_gerais::all();        
+        
+        return view('/Admin/listagem', compact('cadastros'));
     }
+    
 
     /**
      * Show the form for creating a new resource.
