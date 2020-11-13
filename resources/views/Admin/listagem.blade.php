@@ -52,8 +52,9 @@
                                 <td>{{$cadastro->contato}}</td>
 
                                 <td class="text-center">    
-                                <button type="button" class="btn btn-primary btn-sm">Exibir
-                                </button>                     
+                                <button type="button" class="btn btn-danger btn-sm">
+                                <i class="nav-icon fas fa-edit"></i>
+                                </button>                
                               </tr>
                             @endforeach                                                              
                           </tbody>                          

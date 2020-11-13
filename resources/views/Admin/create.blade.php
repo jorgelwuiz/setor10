@@ -41,7 +41,7 @@
                                             <div class="row">
                                                 <div class="form-group col-sm-2">                                                
                                                     <label for="area">Área</label>                                                
-                                                    <select type="text" name="area" class="form-control" id="area" aria-describedby="area" placeholder="Ex: 1" >  
+                                                    <select type="text" name="area" class="form-control" id="area" aria-describedby="area" placeholder="Ex: 1" required>  
                                                         <option value="">Área</option>
                                                             @foreach($areas as $item)                                              
                                                                 <option value="{{$item->area}}">{{$item->area}}</option>
@@ -50,7 +50,7 @@
                                                 </div>    
                                                 <div class="form-group col-sm-6">
                                                     <label for="congregacao">Congregação</label>
-                                                    <select type="text" name="congregacao" class="form-control" id="congregacao" aria-describedby="congregacao" placeholder="Ex: Matriz" >   
+                                                    <select type="text" name="congregacao" class="form-control" id="congregacao" aria-describedby="congregacao" placeholder="Ex: Matriz" required>   
                                                         <option value="">Selecione a congregação</option>
                                                             @foreach($congregacoes as $item)                                              
                                                                 <option value="{{$item->congregacao}}">{{$item->congregacao}}</option>
@@ -68,11 +68,11 @@
                                                 </div>
                                                 <div class="form-group col-sm-8">
                                                     <label for="nome">Nome</label>
-                                                    <input type="text" name="nome" class="form-control" id="nome" aria-describedby="nome" placeholder="Digite o nome completo" >
+                                                    <input type="text" name="nome" class="form-control" id="nome" aria-describedby="nome" placeholder="Digite o nome completo" required>
                                                 </div>        
                                                 <div class="form-group col-sm-4">
                                                     <label for="cartao">Cartão</label>
-                                                    <input type="text" name="numero_cartao_membro" class="form-control" id="numero_cartao_membro" aria-describedby="nome" placeholder="Digite o cartão de membro" >
+                                                    <input type="text" name="numero_cartao_membro" class="form-control" id="numero_cartao_membro" aria-describedby="nome" placeholder="Digite o cartão de membro">
                                                 </div>                                                                                                                                                                                                                                               
                                             </div>      
 
@@ -101,13 +101,20 @@
                                                         <input type="checkbox" name="evento" id="evento_id" aria-describedby="evento_id" value="evento_id">&nbsp;COI
                                                     </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
                                                     <label class="checkbox-inline">
-                                                        <input type="checkbox" name="evento" id="evento_id" aria-describedby="evento_id" value="evento_id">&nbsp;COA
+                                                        <input type="checkbox" name="evento" id="evento_id" aria-describedby="evento_id" value="evento_id" >&nbsp;COA
                                                     </label>
                                                 </div>                                                                                                                                                                                        
                                             </div>                                                                                                                         
                                         </div>                                        
                                         <div class="modal-footer">
-                                            <button type="submit" class="btn btn-success btn-lg ">Savar</button>                                            
+                                            <button type="submit" class="btn btn-success btn-sm ">
+                                                <i class="nav-icon fas fa-check"></i>
+                                                Salvar
+                                            </button>     
+                                            <button type="submit" class="btn btn-danger btn-sm ">
+                                                <i class="nav-icon fas fa-mail-reply-all (alias)"></i>
+                                                Voltar
+                                            </button>                                         
                                         </div>                                                                    
                                     </form>
                                 </div>
