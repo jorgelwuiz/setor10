@@ -8,7 +8,7 @@
         <a href="/dashboard" class="nav-link">Inicio</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contatos</a>
+        <a href="/contatos" class="nav-link">Contatos</a>
       </li>       
     </ul>
 
@@ -115,6 +115,15 @@
         <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
           <i class="fas fa-th-large"></i>
         </a>
-      </li>      
+      </li>
+      <!--Button logout-->
+      <li class="nav-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+        <a class="nav-link" data-widget="control-sidebar" data-slide="true"  href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" role="button">
+          <span class="oi oi-account-logout"></span>     
+        </a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+            @csrf
+        </form>
+      </li>       
     </ul>
   </nav>

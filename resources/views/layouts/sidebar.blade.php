@@ -27,7 +27,7 @@
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-edit"></i>
                         <p>
-                            Cadastro Geral
+                            Administração
                             <i class="right fas fa-angle-left"></i>                            
                         </p>
                     </a>
@@ -47,17 +47,26 @@
                             </a>
                         </li>                        
                     </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                            <i class="nav-icon far fa-user"></i>
+                            <p>Usuários</p>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon far fa-user"></i>
+                    <a href="/contatos" class="nav-link">
+                        <i class="nav-icon oi oi-spreadsheet"></i>                
                         <p>
-                            Usuários
+                            Agenda de Contatos
                         </p>
                     </a>
                 </li>
+                
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/eventos" class="nav-link">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
                             Eventos
@@ -87,15 +96,7 @@
                             Função Eclesiastica
                         </p>
                     </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-book"></i>
-                        <p>
-                            Áreas
-                        </p>
-                    </a>
-                </li>        
+                </li>                       
                 <li class="nav-header">                   
                         REGISTRO DE FREQUENCIAS
                 </li>

@@ -6,20 +6,7 @@
                 <div class="row mb-2">
                   <div class="col-sm-6">
                       <h1>Dashboard</h1>
-                  </div>
-                  <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">                                               
-                      <li class="breadcrumb-item active" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">                                                 
-                          <a  class="" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                          <i class="fa fa-arrow-circle-down "></i> Sair
-                          </a>
-                          <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                              @csrf
-                          </form>                          
-                        
-                      </li>                                                                                                    
-                    </ol>                          
-                  <div>                        
+                  </div>                                         
                 </div>                    
               </div>                                                                                       
             </section>                                  

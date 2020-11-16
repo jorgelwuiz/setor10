@@ -21,6 +21,8 @@ Route::get('/', function()
 Route::group(['middleware' => 'auth'], function (){
 
     Route::get('/dashboard', 'DashboardController@index');
+    Route::get('/contatos', 'ContatosController@index');
+    Route::get('/eventos', 'EventosController@index');
     Route::get('/listagem', 'ListagemController@index');
     Route::post('/auth/logout', 'Auth\AuthController@logout');
     

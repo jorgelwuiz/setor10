@@ -6,19 +6,7 @@
                 <div class="row mb-2">
                   <div class="col-sm-6">
                       <h1>Cadastrar Usuário</h1>
-                  </div>
-                  <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">                                               
-                      <li class="breadcrumb-item active" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">                                                 
-                          <a  class="" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                          <i class="fa fa-arrow-circle-down "></i> Sair
-                          </a>
-                          <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                              @csrf
-                          </form>                                                  
-                      </li>                                                                                                    
-                    </ol>                          
-                  <div>                        
+                  </div>                                        
                 </div>                    
               </div>                                                                                       
             </section>        
@@ -108,13 +96,13 @@
                                         </div>                                        
                                         <div class="modal-footer">
                                             <button type="submit" class="btn btn-success btn-sm ">
-                                                <i class="nav-icon fas fa-check"></i>
+                                                <span class="oi oi-task"></span>
                                                 Salvar
                                             </button>     
-                                            <button type="submit" class="btn btn-danger btn-sm ">
-                                                <i class="nav-icon fas fa-mail-reply-all (alias)"></i>
+                                            <a href="/dashboard" class="btn btn-danger btn-sm ">
+                                                <span class="oi oi-action-undo"></span>
                                                 Voltar
-                                            </button>                                         
+                                            </a>                                         
                                         </div>                                                                    
                                     </form>
                                 </div>
