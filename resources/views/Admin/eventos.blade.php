@@ -11,30 +11,30 @@
               </div>                                                                                       
             </section>                                  
             <section class="content">
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-title">Listagem de Eventos</h3>
-                      </div>
-                      <!-- /.card-header -->
-                      <div class="card-body">
-                        <table id="example1" class="table table-bordered table-striped dataTable dtr-inline">                        
-                          <thead>
-                            <tr>
-                              <th>Evento</th>
-                              <th>Descrição do Evento</th>   
-                              <th>Data do Cadastro</th>                                                                    
-                            </tr>
-                          </thead>
-                          <tbody>
-                            @foreach($eventos as $evento)
-                              <tr>                                
-                                <td>{{$evento->evento}}</td>                                                             
-                                <td>{{$evento->Descricao}}</td>    
-                                <td>{{date("d/m/Y H:i:s", strtotime ($evento->created_at)) }}</td>                                                                        
-                            @endforeach                                                              
-                          </tbody>                          
-                        </table>
-                      </div>
+              <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Listagem de Eventos</h3>
+                  </div>
+                  <!-- /.card-header -->
+                  <div class="card-body">
+                    <table id="example1" class="table table-bordered table-striped dataTable dtr-inline">                        
+                      <thead>
+                        <tr>
+                          <th>Evento</th>
+                          <th>Descrição do Evento</th>   
+                          <th>Data do Cadastro</th>                                                                                            
+                        </tr>
+                      </thead>
+                      <tbody>
+                        @foreach($eventos as $evento)
+                          <tr>                                
+                            <td>{{$evento->evento}}</td>                                                             
+                            <td>{{$evento->Descricao}}</td>    
+                            <td>{{date("d/m/Y H:i:s", strtotime ($evento->created_at)) }}</td>                                                                                                        
+                        @endforeach                                                              
+                      </tbody>                          
+                    </table>
+                  </div>
                 </div>
             </section>
         </div>

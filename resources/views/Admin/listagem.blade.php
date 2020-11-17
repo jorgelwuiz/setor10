@@ -26,7 +26,9 @@
                               <th>Cartão de Membro</th>
                               <th>Função</th>
                               <th>Contato</th>
+                              <th>E-mail</th>
                               <th class="text-center">Ação</th>
+                              <th class="text-center">Ver</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -38,14 +40,21 @@
                                 <td>{{$cadastro->numero_cartao_membro}}</td>
                                 <td>{{$cadastro->funcao_eclesiastica_id}}</td>                                
                                 <td>{{$cadastro->contato}}</td>
+                                <td>{{$cadastro->email}}</td>                                
 
                                 <td class="text-center">    
-                                <button type="button" class="btn btn-success btn-sm">
-                                  <span class="oi oi-pencil"></span>
-                                </button>         
-                                <button type="button" class="btn btn-danger btn-sm">
-                                  <span class="oi oi-trash"></span>
-                                </button>           
+                                  <button type="button" class="btn btn-success btn-sm">
+                                    <span class="oi oi-pencil"></span>
+                                  </button>         
+                                  <button type="button" class="btn btn-danger btn-sm">
+                                    <span class="oi oi-trash"></span>
+                                  </button>                                     
+                                </td>       
+                                <td class="text-center">    
+                                    <button type="button" class="btn btn-info btn-sm">
+                                      <span class="oi oi-eye"></span>
+                                    </button>                                           
+                                  </td>                                  
                               </tr>
                             @endforeach                                                              
                           </tbody>                          

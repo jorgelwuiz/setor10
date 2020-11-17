@@ -28,7 +28,7 @@
     <ul class="navbar-nav ml-auto">
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
+        {{--<a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-comments"></i>
           <span class="badge badge-danger navbar-badge">3</span>
         </a>
@@ -115,11 +115,11 @@
         <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
           <i class="fas fa-th-large"></i>
         </a>
-      </li>
+      </li>--}}
       <!--Button logout-->
       <li class="nav-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
         <a class="nav-link" data-widget="control-sidebar" data-slide="true"  href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" role="button">
-          <span class="oi oi-account-logout"></span>     
+        <span class="oi oi-power-standby"></span>
         </a>
         <form id="logout-form" action="{{ route('logout') }}" method="POST">
             @csrf

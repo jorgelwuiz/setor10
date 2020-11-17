@@ -17,7 +17,7 @@ class ListagemController extends Controller
      */
     public function index()
     {
-        $cadastros = cadastro_gerais::all();        
+        $cadastros = cadastro_gerais::all()->where('status', '1');
         
         return view('/Admin/listagem', compact('cadastros'));
     }

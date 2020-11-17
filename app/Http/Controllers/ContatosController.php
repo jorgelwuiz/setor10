@@ -15,8 +15,8 @@ class ContatosController extends Controller
      */
     public function index()
     {
-        $contatos = cadastro_gerais::all();
-        
+        $contatos = cadastro_gerais::all()->where('funcao_eclesiastica_id', true);
+                                            
         return view('/Admin/contatos',compact('contatos'));
     }
 
