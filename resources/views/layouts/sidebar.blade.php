@@ -1,4 +1,4 @@
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar sidebar-dark-success elevation-4">
     <a href="/dashboard" class="brand-link">
         <img src="adminlte/dist/img/logo-ieadpe-192x192.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
             style="opacity: .8">
