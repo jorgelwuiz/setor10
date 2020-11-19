@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Eventos;
+use App\Models\Eventos;
 use Illuminate\Http\Request;
 
 class EventosController extends Controller
@@ -16,7 +16,7 @@ class EventosController extends Controller
     {
         $eventos = eventos::all();
 
-        return view('Admin/eventos', compact('eventos'));
+        return view('Admin.eventos', compact('eventos'));
     }
 
     /**

@@ -55,48 +55,48 @@
                             </a>
                         </li>
                     </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/congregacao" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Congregações
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/eventos" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Eventos
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Áreas
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Função Eclesiastica
+                                </p>
+                            </a>
+                        </li> 
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a href="/contatos" class="nav-link">
-                        <i class="nav-icon oi oi-spreadsheet"></i>                
-                        <p>
-                            Agenda de Contatos
-                        </p>
-                    </a>
-                </li>
-                
-                <li class="nav-item">
-                    <a href="/eventos" class="nav-link">
-                        <i class="nav-icon fas fa-book"></i>
-                        <p>
-                            Eventos
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-book"></i>
-                        <p>
-                            Áreas
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-book"></i>
-                        <p>
-                            Congregações
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-book"></i>
-                        <p>
-                            Função Eclesiastica
-                        </p>
-                    </a>
-                </li>                       
+                                                                                                         
                 <li class="nav-header">                   
                         REGISTRO DE FREQUENCIAS
                 </li>

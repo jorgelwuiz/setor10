@@ -19,7 +19,7 @@ class ListagemController extends Controller
     {
         $cadastros = cadastro_gerais::all()->where('status', '1');
         
-        return view('/Admin/listagem', compact('cadastros'));
+        return view('Admin.listagem', compact('cadastros'));
     }
     
 

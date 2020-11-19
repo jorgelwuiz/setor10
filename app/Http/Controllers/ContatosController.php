@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Contatos;
+use App\Models\contatos;
 use App\cadastro_gerais;
 use Illuminate\Http\Request;
 
@@ -17,7 +17,7 @@ class ContatosController extends Controller
     {
         $contatos = cadastro_gerais::all()->where('funcao_eclesiastica_id', true);
                                             
-        return view('/Admin/contatos',compact('contatos'));
+        return view('Admin.contatos',compact('contatos'));
     }
 
     /**

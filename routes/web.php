@@ -23,14 +23,17 @@ Route::group(['middleware' => 'auth'], function (){
     Route::get('/dashboard', 'DashboardController@index');
     Route::get('/contatos', 'ContatosController@index');
     Route::get('/eventos', 'EventosController@index');
-    Route::get('/listagem', 'ListagemController@index');
+    Route::get('/listagem', 'ListagemController@index');    
     Route::post('/auth/logout', 'Auth\AuthController@logout');
+
+        Route::get('/congregacao', 'CongregacoesController@index');
+        Route::post('/cadastrar/congregacao', 'CongregacoesController@store');
+        Route::get('/deletar/congregacao/{id}', 'CongregacoesController@destroy');
     
     Route::get('/cadastro-geral-usuario', 'CadastrosController@index');
     Route::get('deletar/cadastro/geral/{id}','CadastrosController@destroy');
-    Route::get('editar/cadastro/geral/', 'CadastrosController@indexEditar');
+    Route::get('editar/cadastro/geral/{id}', 'CadastrosController@indexEditar');
     Route::post('editar/cadastro/geral/{id}','CadastrosController@update');
-
 
     Route::get('/chamadas/congresso-de-mulheres', 'CadastrosController@indexMulheres')->name('presencas.mulheres.confirmar');
     Route::post('confirmarpresenca', 'presencasController@store');

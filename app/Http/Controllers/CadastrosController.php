@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+
 use App\funcao_eclesiasticas;
 use App\cadastro_gerais;
-use App\congregacoes;
 use App\cadastros;
 use App\areas;
-use App\eventos;
+
+use App\Models\eventos;
+use App\Models\congregacoes;
 
 
 class CadastrosController extends Controller
@@ -31,33 +33,7 @@ class CadastrosController extends Controller
 
         return view('Admin/CadastroGeral', compact('cadastros','congregacoes','areas','funcao_eclesiasticas','eventos'));
     }
-
-    //Index chamada Mulheres     
-    public function indexMulheres()
-    {
-        $cadastros = db::table('geral_cadastros')                                                        
-                        ->where('evento_1_id','=','2')
-                        ->orderBy('area_id')
-                        ->get();    
-
-        $congregacoes = congregacoes::all();        
-        $areas = areas::all();
-        $eventos = eventos::all();
-
-        return view('presencasMulheres', compact('cadastros','congregacoes','areas','eventos'));
-    }
-
-    //Index Editar    
-    public function indexEditar()
-    {          
-        $cadastros = cadastro_gerais::all();
-        $congregacoes = congregacoes::all();        
-        $areas = areas::all();
-        $eventos = eventos::all();
-
-        return view('/Admin/EditarCadastroGeral', compact('cadastros','congregacoes','areas','eventos'));
-    }
-
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -71,7 +47,7 @@ class CadastrosController extends Controller
         $funcao_eclesiasticas = db::table('funcao_eclesiasticas')->orderBy('funcao_eclesiastica')->get();        
         $eventos = eventos::all();
 
-        return view('/Admin/create',compact('areas','congregacoes','funcao_eclesiasticas','eventos'));
+        return view('Admin.create',compact('areas','congregacoes','funcao_eclesiasticas','eventos'));
     }
 
     /**

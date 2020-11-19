@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Presencas;
-use App\geral_cadastros;
-use App\eventos;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use App\Models\congregacoes;
+use App\congregacao;
 
-class PresencasController extends Controller
+class CongregacoesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +15,10 @@ class PresencasController extends Controller
      */
     public function index()
     {
-        //
+        $congregacoes = congregacoes::all();
+        $congregacao = congregacoes::get();
+
+        return view('Admin.congregacoes', compact('congregacoes', 'congregacao'));
     }
 
     /**
@@ -38,21 +39,20 @@ class PresencasController extends Controller
      */
     public function store(Request $request)
     {
-        $presencas = new presencas();
-        $presencas->presenca_id = $request->presenca_id;
-        $presencas->evento_id = $request->evento_id;      
-        $presencas->save();
+        $congregacoes = new congregacoes();
+        $congregacoes->congregacao = $request->congregacao;        
+        $congregacoes->save();
 
-        return view('presencasMulheres');
+        return redirect('congregacao');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Presencas  $presencas
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Presencas $presencas)
+    public function show($id)
     {
         //
     }
@@ -60,10 +60,10 @@ class PresencasController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Presencas  $presencas
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Presencas $presencas)
+    public function edit($id)
     {
         //
     }
@@ -72,10 +72,10 @@ class PresencasController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Presencas  $presencas
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Presencas $presencas)
+    public function update(Request $request)
     {
         //
     }
@@ -83,11 +83,15 @@ class PresencasController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Presencas  $presencas
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Presencas $presencas)
+    public function destroy(Request $request)
     {
-        //
+        $congregacoes = congregacoes::find($request->id);
+        $congregacoes->delete();
+
+        return redirect ('congregacao');
+
     }
 }
