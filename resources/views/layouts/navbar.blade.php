@@ -119,7 +119,7 @@
       <!--Button logout-->
       <li class="nav-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
         <a class="nav-link" data-widget="control-sidebar" data-slide="true"  href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" role="button">
-        <span class="oi oi-power-standby"></span>
+        <span class="oi oi-power-standby"></span> Sair
         </a>
         <form id="logout-form" action="{{ route('logout') }}" method="POST">
             @csrf
