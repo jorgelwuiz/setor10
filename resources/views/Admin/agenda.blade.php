@@ -148,26 +148,26 @@
           });
       </script>
       <script>
-          $('#exampleModal').on('show.bs.modal', function (event)
-              {
-                  var button = $(event.relatedTarget)
-                  var recipient = button.data('whatever')
-                  var nome = button.data('nome')
-                  var telefone = button.data('telefone')                    
-                  var id = button.data('id')
+        $('#exampleModal').on('show.bs.modal', function (event)
+            {
+                var button = $(event.relatedTarget)
+                var recipient = button.data('whatever')
+                var nome = button.data('nome')
+                var telefone = button.data('telefone')                    
+                var id = button.data('id')
 
-                  var modal = $(this)
-                  modal.find('.modal-body input').val(recipient)
+                var modal = $(this)
+                modal.find('.modal-body input').val(recipient)
 
-                  modal.find('#nome').val(nome)
-                  modal.find('#telefone').val(telefone)                       
-                  modal.find('#id').val(id)
+                modal.find('#nome').val(nome)
+                modal.find('#telefone').val(telefone)                       
+                modal.find('#id').val(id)
 
-              })
-          $(document).ready(function()
-          {
-              $('#example').DataTable();
-          });            
+            })
+        $(document).ready(function()
+        {
+            $('#example').DataTable();
+        });            
 
       </script>
     @endsection
