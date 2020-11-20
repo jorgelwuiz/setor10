@@ -29,7 +29,7 @@ Route::group(['middleware' => 'auth'], function (){
 
         Route::get('/agenda', 'AgendaController@index');
         Route::post('/cadastrar/contato', 'AgendaController@store');
-        Route::post('Editarcontato', 'AgendaController@update');
+        Route::post('editarContato', 'AgendaController@update');
         Route::get('/deletar/contato/{id}', 'AgendaController@destroy');
 
         Route::get('/congregacao', 'CongregacoesController@index');

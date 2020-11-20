@@ -15,6 +15,8 @@ class CreateCongregacoesTable extends Migration
     {
         Schema::create('congregacoes', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('area_id')->nullable();
+            $table->foreign('area_id')->references('id')->on('areas');      
             $table->string('congregacao');
             $table->timestamps();
         });

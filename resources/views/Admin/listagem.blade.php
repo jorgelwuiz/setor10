@@ -5,7 +5,7 @@
               <div class="container-fluid">
                 <div class="row mb-2">
                   <div class="col-sm-6">
-                      <h1>Listagem Geral</h1>
+                      <h1>Cadastro Geral</h1>
                   </div>                                          
                 </div>                    
               </div>                                                                                       
@@ -13,11 +13,11 @@
             <section class="content">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Cadastros Gerais</h3>
+                        <h3 class="card-title"><b>Listagem Geral</b></h3>
                       </div>
                       <!-- /.card-header -->
                       <div class="card-body">
-                        <table id="example1" class="table table-bordered table-striped dataTable dtr-inline">                        
+                        <table id="example1" class="table table-bordered table-striped dataTable dtr-inline table-striped">                        
                           <thead>
                             <tr>
                               <th>Area</th>
@@ -27,8 +27,8 @@
                               <th>Função</th>
                               <th>Contato</th>
                               <th>E-mail</th>
-                              <th class="text-center">Ação</th>
                               <th class="text-center">Ver</th>
+                              <th class="text-center">Ação</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -43,18 +43,19 @@
                                 <td>{{$cadastro->email}}</td>                                
 
                                 <td class="text-center">    
+                                  <button type="button" class="btn btn-info btn-sm">
+                                    <span class="oi oi-eye"></span>
+                                  </button>                                           
+                                </td>
+
+                                <td class="text-center">    
                                   <button type="button" class="btn btn-success btn-sm">
                                     <span class="oi oi-pencil"></span>
                                   </button>         
                                   <button type="button" class="btn btn-danger btn-sm">
                                     <span class="oi oi-trash"></span>
                                   </button>                                     
-                                </td>       
-                                <td class="text-center">    
-                                    <button type="button" class="btn btn-info btn-sm">
-                                      <span class="oi oi-eye"></span>
-                                    </button>                                           
-                                  </td>                                  
+                                </td>                                                                         
                               </tr>
                             @endforeach                                                              
                           </tbody>                          
@@ -63,8 +64,6 @@
                 </div>
             </section>
         </div>
-
-
 
         @section('scripts')
             <script>

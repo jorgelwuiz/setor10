@@ -39,17 +39,16 @@
         <section class="content-fluid">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Listagem de Contatos</h3>              
+              <h3 class="card-title"><b>Listagem de Contatos</b></h3>              
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-              <table id="example1" class="table table-bordered table-striped dataTable dtr-inline">                        
+              <table id="example3" class="table table-bordered table-striped dataTable dtr-inline">                        
                 <thead>
                   <tr>
                     <th>Nome</th>
                     <th>Telefone</th>   
                     <th>Data do Cadastro</th>     
-
                     <th class="text-center">Ação</th>                                                         
                   </tr>
                 </thead>
@@ -61,20 +60,18 @@
                       <td>{{date("d/m/Y H:i:s", strtotime ($agenda->created_at)) }}</td>   
 
                       <td class="text-center"> 
-
-                      <!--Botão Editar-->    
-                      <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#exampleModal"                                                                                               
-                          data-nome="{{$agenda->nome}}"                                                    
-                          data-telefone="{{$agenda->telefone}}"  
-                          data-id="{{$agenda->id}}">             
-                          <span class="oi oi-pencil"></span>                                            
-                      </button>
-                    
-                      <!--Botão Deletar-->                                                                                          
-                      <a href="deletar/contato/{{$agenda->id}}" class="btn btn-danger btn-sm" onClick="return confirm('DESEJA REALMENTE DELETAR ESTE CONTATO?')">
-                          <span class="oi oi-trash"></span>
-                      </a>         
-                    </td>
+                        <!--Botão Editar-->    
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#exampleModal"                                                                                               
+                            data-nome="{{$agenda->nome}}"                                                    
+                            data-telefone="{{$agenda->telefone}}"  
+                            data-id="{{$agenda->id}}">             
+                            <span class="oi oi-pencil"></span>                                            
+                        </button>                    
+                        <!--Botão Deletar-->                                                                                          
+                        <a href="deletar/contato/{{$agenda->id}}" class="btn btn-danger btn-sm" onClick="return confirm('DESEJA REALMENTE DELETAR ESTE CONTATO?')">
+                            <span class="oi oi-trash"></span>
+                        </a>         
+                      </td>
                     </tr>                                                                                                      
                   @endforeach                                                              
                 </tbody>                          
@@ -83,19 +80,20 @@
           </div>
         </section>
       </div>
-
-      <!-- Modal -->
+      <!-- Modal Editar -->
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Editar Contato</h5>
+              <h5 class="modal-title" id="exampleModalLabel">
+                <i class="nav-icon fas fa-edit"></i> Editar Contato
+              </h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <form action="Editarcontato" method="POST">       
+              <form action="editarContato" method="POST">       
                 @csrf                 
                 <div class="form-row align-items-center">
                   <div class="col-sm-5">
@@ -111,24 +109,19 @@
                       </div>                     
                     </div>
                   </div>                                            
-                </div>
+                </div>              
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-              
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>          
                   <button type="submit" class="btn btn-success mb-1">
                     <span class="oi oi-task"></span> Salvar mudanças
                   </button>              
                 </div>
               </form>
-            </div>
-            
+            </div>            
           </div>
         </div>
       </div>
-
-      <!--START SCRIPT-->
       
-
     @section('scripts')
       <script>
           $(function () {
@@ -144,7 +137,7 @@
               "info": true,
               "autoWidth": false,
               "responsive": true,
-              });
+              });              
           });
       </script>
       <script>
@@ -162,13 +155,14 @@
                 modal.find('#nome').val(nome)
                 modal.find('#telefone').val(telefone)                       
                 modal.find('#id').val(id)
-
-            })
-        $(document).ready(function()
-        {
-            $('#example').DataTable();
-        });            
-
+            })        
+      </script>
+      
+      <script>
+          $(document).ready(function()
+          {                   
+              $('#telefone').mask('(00) 00000-0000');                                                                               
+          });
       </script>
     @endsection
 @endsection

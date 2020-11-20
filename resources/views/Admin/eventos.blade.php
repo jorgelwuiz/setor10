@@ -39,7 +39,6 @@
             </section>
         </div>
 
-
         @section('scripts')
             <script>
                 $(function () {

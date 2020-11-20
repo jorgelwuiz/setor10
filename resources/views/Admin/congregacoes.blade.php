@@ -1,68 +1,33 @@
 @extends('layouts.sistema')
     @section('content')
-        <div class="content-wrapper">
-            <section class="content-header">
-              <div class="container-fluid">
-                <div class="row mb-2">
-                  <div class="col-sm-6">
-                      <h1><b></b></h1>
-                  </div>                                        
-                </div>                    
-              </div>                                                                                       
-            </section>        
-            <div class="container">  
-                <div class="portlet-body">
-                    <div class="table-container">
-                        <div class="portlet">
-                            <div class="portlet-body form">                                                                                        
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h3 class="modal-title" id="exampleModalCad">
-                                            {{-- <i class="fa fa-home"></i> --}}
-                                            <span aria-hidden="true" class="icon-note"></span>
-                                                <b>Formulário</b>
-                                        </h3>
-                                    </div>
-                                    <form action="/cadastrar/congregacao" method="POST">
-                                        @csrf
-                                        <div class="modal-body">
-                                            <div class="row">
-                                                <div class="form-group col-sm-12">                                                
-                                                    <label for="area">Congregação</label>                                                
-                                                    <input type="text" name="congregacao" class="form-control" id="congregacao" aria-describedby="congregacao" placeholder="Digite a Congregação" required>                                                                                                         
-                                                </div>                                                                                                                                                                                                                                                                                                 
-                                            </div>                                                                                                                                                                          
-                                        </div>                                        
-                                        <div class="modal-footer">
-                                            <button type="submit" class="btn btn-success btn-sm ">
-                                                <span class="oi oi-task"></span>
-                                                Salvar
-                                            </button>     
-                                            <a href="/dashboard" class="btn btn-danger btn-sm ">
-                                                <span class="oi oi-action-undo"></span>
-                                                Voltar
-                                            </a>                                         
-                                        </div>                                                                    
-                                    </form>
-                                </div>
+    <div class="content-wrapper">
+        <section class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-7">
+                    <h1>Congregação</h1>
+                </div> 
+                <!--Formulário de cadastro de contatos (Agenda interna de funcionários)-->
+                <div class="float-right">
+                    <form action="/cadastrar/congregacao" method="POST">  
+                        @csrf                 
+                        <div class="form-row align-items-center">
+                            <div class="col-sm-8">
+                                <label class="sr-only" for="inlineFormInput">Nome</label>
+                                <input type="text" name="congregacao" class="form-control" id="congregacao" aria-describedby="congregacao" placeholder="Digite a Congregação!" required>
+                            </div>                                              
+                            <div class="col-auto">
+                                <button type="submit" class="btn btn-success mb-1">Cadastrar</button>
                             </div>
                         </div>
-                    </div>
-                </div>  
-            </div>   
-            <section class="content-header">
-                <div class="container-fluid">
-                    <div class="row mb-2">
-                    <div class="col-sm-6">
-                        <h1></h1>
-                    </div>                                          
-                    </div>                    
-                </div>                                                                                       
-            </section>
+                    </form>
+                </div>                                        
+            </div>                                                                                                                      
+            </section>                                 
             <section class="content">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title"><b>Listagem Geral de Congregações</b></h3>
+                        <h3 class="card-title"><b>Listagem de Congregações</b></h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -101,7 +66,8 @@
                     </div>
                 </div>                
             </section> 
-        </div>   
+        </div>  
+    </div>   
 
             @section('scripts')
                 <script>

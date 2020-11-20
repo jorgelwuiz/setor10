@@ -38,3 +38,7 @@
 <script src="{{asset('adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
 <script src="{{asset('adminlte/plugins/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>
 <script src="{{asset('adminlte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
+
+<!--SCRIPT MASK-->
+<script src="{{asset('adminlte/dist/js/jquery.min.js')}}"></script>
+<script src="{{asset('adminlte/dist/js/jquery.mask.min.js')}}"></script>

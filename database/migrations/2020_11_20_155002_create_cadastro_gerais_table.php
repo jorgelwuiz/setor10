@@ -15,9 +15,9 @@ class CreateCadastroGeraisTable extends Migration
     {
         Schema::create('cadastro_gerais', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('area_id');
+            $table->unsignedBigInteger('area_id')->nullable();
             $table->foreign('area_id')->references('id')->on('areas');            
-            $table->unsignedBigInteger('congregacao_id');
+            $table->unsignedBigInteger('congregacao_id')->nullable();
             $table->foreign('congregacao_id')->references('id')->on('congregacoes'); 
             $table->unsignedBigInteger('funcao_eclesiastica_id')->nullable();
             $table->foreign('funcao_eclesiastica_id')->references('id')->on('funcao_eclesiasticas');       
