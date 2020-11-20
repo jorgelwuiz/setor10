@@ -100,7 +100,7 @@
                                                 Salvar
                                             </button>     
                                             <a href="/dashboard" class="btn btn-danger btn-sm ">
-                                                <span class="oi oi-action-undo"></span>
+                                                <span class="fa fa-angle-double-left"></span>
                                                 Voltar
                                             </a>                                         
                                         </div>                                                                    

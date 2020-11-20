@@ -18,13 +18,19 @@ Route::get('/', function()
         return view('auth.login');
     });
 
+Route::post('/auth/logout', 'Auth\AuthController@logout');
+
 Route::group(['middleware' => 'auth'], function (){
 
-    Route::get('/dashboard', 'DashboardController@index');
-    Route::get('/contatos', 'ContatosController@index');
+    Route::get('/dashboard', 'DashboardController@index');    
     Route::get('/eventos', 'EventosController@index');
     Route::get('/listagem', 'ListagemController@index');    
-    Route::post('/auth/logout', 'Auth\AuthController@logout');
+    
+
+        Route::get('/agenda', 'AgendaController@index');
+        Route::post('/cadastrar/contato', 'AgendaController@store');
+        Route::post('Editarcontato', 'AgendaController@update');
+        Route::get('/deletar/contato/{id}', 'AgendaController@destroy');
 
         Route::get('/congregacao', 'CongregacoesController@index');
         Route::post('/cadastrar/congregacao', 'CongregacoesController@store');
@@ -41,7 +47,6 @@ Route::group(['middleware' => 'auth'], function (){
     //Metodo create, cadastrar, atualiza e deletar.
     Route::get('/cadastrar-usuario', 'CadastrosController@create');
     Route::post('/cadastrar/pessoa', 'CadastrosController@store');
-
 
 });
 

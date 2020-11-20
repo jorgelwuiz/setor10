@@ -34,31 +34,31 @@
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="/listagem" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>Listagem</p>
+                            <i class="fa fa-list-ul"></i>
+                            <p>Listagem Geral</p>
                             </a>
                         </li>                        
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="/cadastrar-usuario" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>Cadastrar</p>
+                                <span class="oi oi-task"></span>
+                                <p>Cadastrar</p>
                             </a>
                         </li>                        
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                            <i class="nav-icon far fa-user"></i>
-                            <p>Usuários</p>
+                                <span class="oi oi-person"></span>
+                                <p>Usuários</p>
                             </a>
                         </li>
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="/congregacao" class="nav-link">
-                                <i class="nav-icon fas fa-book"></i>
+                                <span class="fa fa-align-justify"></span>
                                 <p>
                                     Congregações
                                 </p>
@@ -68,7 +68,7 @@
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="/eventos" class="nav-link">
-                                <i class="nav-icon fas fa-book"></i>
+                                <span class="fa fa-align-justify"></span>
                                 <p>
                                     Eventos
                                 </p>
@@ -78,7 +78,7 @@
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-book"></i>
+                                <span class="fa fa-align-justify"></span>
                                 <p>
                                     Áreas
                                 </p>
@@ -88,7 +88,7 @@
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-book"></i>
+                                <span class="fa fa-align-justify"></span>
                                 <p>
                                     Função Eclesiastica
                                 </p>

@@ -8,7 +8,7 @@
         <a href="/dashboard" class="nav-link">Inicio</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="/contatos" class="nav-link">Contatos</a>
+        <a href="/agenda" class="nav-link">Agenda</a>
       </li>       
     </ul>
 

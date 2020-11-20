@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\contatos;
-use App\cadastro_gerais;
 use Illuminate\Http\Request;
+use App\Models\agendas;
 
-class ContatosController extends Controller
+class AgendaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,9 @@ class ContatosController extends Controller
      */
     public function index()
     {
-        $contatos = cadastro_gerais::all()->where('funcao_eclesiastica_id', true);
-                                            
-        return view('Admin.contatos',compact('contatos'));
+        $agendas = agendas::all();
+
+        return view('Admin.agenda', compact('agendas'));
     }
 
     /**
@@ -38,16 +37,22 @@ class ContatosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $agendas = new agendas();
+        $agendas->nome = $request->nome;
+        $agendas->telefone = $request->telefone;        
+        $agendas->save();
+
+        return redirect ('/agenda');
+
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Contatos  $contatos
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Contatos $contatos)
+    public function show($id)
     {
         //
     }
@@ -55,10 +60,10 @@ class ContatosController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Contatos  $contatos
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Contatos $contatos)
+    public function edit($id)
     {
         //
     }
@@ -67,22 +72,32 @@ class ContatosController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Contatos  $contatos
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Contatos $contatos)
+    public function update(Request $request)
     {
-        //
+        $agendas = agendas::find($request->id);
+
+        $agendas->nome = $request->nome;
+        $agendas->telefone = $request->telefone;
+        dd($agenda);
+        $agendas->save();
+
+        return redirect ('/agenda');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Contatos  $contatos
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Contatos $contatos)
+    public function destroy(Request $request)
     {
-        //
+        $agendas = agendas::find($request->id);
+        $agendas->delete();
+        
+        return redirect ('/agenda');
     }
 }
