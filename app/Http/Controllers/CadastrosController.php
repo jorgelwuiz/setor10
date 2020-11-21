@@ -5,10 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
-use App\funcao_eclesiasticas;
+use App\Models\funcao_eclesiasticas;
 use App\cadastro_gerais;
 use App\cadastros;
-use App\areas;
+use App\Models\areas;
 
 use App\Models\eventos;
 use App\Models\congregacoes;
