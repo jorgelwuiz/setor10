@@ -42,3 +42,13 @@
 <!--SCRIPT MASK-->
 <script src="{{asset('adminlte/dist/js/jquery.min.js')}}"></script>
 <script src="{{asset('adminlte/dist/js/jquery.mask.min.js')}}"></script>
+
+<!-- /.content-wrapper -->
+<div class="wrapper">
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Setor 10 |</b> Jaboatão
+    </div>
+    <strong>&copy; 2019-2020  <a href="https://www.ieadpeplay.org.br" target="_blank">IEADPE</a></strong>
+  </footer>
+</div>

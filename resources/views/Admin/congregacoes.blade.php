@@ -55,7 +55,7 @@
                                             </button>
 
                                             <!--Botão Deletar-->                                                                                          
-                                            <a href="deletar/congregacao/{{$congregacao->id}}" class="btn btn-danger btn-sm" onClick="return confirm('DESEJA REALMENTE DELETAR ESTE USUÁRIO?')">
+                                            <a href="deletar/congregacao/{{$congregacao->id}}" class="btn btn-danger btn-sm" onClick="return confirm('DESEJA REALMENTE DELETAR A CONGREGAÇÃO?')">
                                                 <span class="oi oi-trash"></span>
                                             </a>                                     
                                         </td>                                                                               
@@ -69,23 +69,23 @@
         </div>  
     </div>   
 
-            @section('scripts')
-                <script>
-                    $(function () {
-                        $("#example1").DataTable({
-                        "responsive": true,
-                        "autoWidth": false,
-                        });
-                        $('#example2').DataTable({
-                        "paging": true,
-                        "lengthChange": false,
-                        "searching": false,
-                        "ordering": true,
-                        "info": true,
-                        "autoWidth": false,
-                        "responsive": true,
-                        });
-                    });
-                </script>
-            @endsection
+    @section('scripts')
+        <script>
+            $(function () {
+                $("#example1").DataTable({
+                "responsive": true,
+                "autoWidth": false,
+                });
+                $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+                });
+            });
+        </script>
+    @endsection
 @endsection

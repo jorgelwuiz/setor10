@@ -120,8 +120,7 @@
             </div>            
           </div>
         </div>
-      </div>
-      
+      </div>      
     @section('scripts')
       <script>
         $(function () 
@@ -158,12 +157,12 @@
                 modal.find('#id').val(id)
             })        
       </script>
-      
+
       <script>
           $(document).ready(function()
           {                   
               $('#telefone').mask('(00) 00000-0000');                                                                               
           });
-      </script>
+      </script>     
     @endsection
 @endsection

@@ -54,14 +54,39 @@
                                                             @endforeach
                                                     </select>
                                                 </div>
-                                                <div class="form-group col-sm-8">
+                                                <div class="form-group col-sm-6">
                                                     <label for="nome">Nome</label>
                                                     <input type="text" name="nome" class="form-control" id="nome" aria-describedby="nome" placeholder="Digite o nome completo" required>
-                                                </div>        
+                                                </div>      
+                                                <div class="form-group col-sm-2">
+                                                    <label for="nome">Contato</label>
+                                                    <input type="text" name="telefone" class="form-control" id="telefone" aria-describedby="nome" placeholder="(81) 99999-3333" required>
+                                                </div>    
                                                 <div class="form-group col-sm-4">
+                                                    <label for="cartao">Email</label>
+                                                    <input type="text" name="email" class="form-control" id="email" aria-describedby="email" placeholder="Digite o e-mail">
+                                                </div> 
+                                                <div class="form-group col-sm-2">
                                                     <label for="cartao">Cartão</label>
-                                                    <input type="text" name="numero_cartao_membro" class="form-control" id="numero_cartao_membro" aria-describedby="nome" placeholder="Digite o cartão de membro">
-                                                </div>                                                                                                                                                                                                                                               
+                                                    <input type="text" name="numero_cartao_membro" class="form-control" id="numero_cartao_membro" aria-describedby="nome" placeholder="Digite o número">
+                                                </div>       
+                                                <div class="form-group col-sm-6">
+                                                    <label for="cartao">Endereço</label>
+                                                    <input type="text" name="endereco" class="form-control" id="endereco" aria-describedby="endereco" placeholder="Digite o endereço">
+                                                </div>    
+                                                <div class="form-group col-sm-2">
+                                                    <label for="cartao">Nº</label>
+                                                    <input type="text" name="numero" class="form-control" id="numero" aria-describedby="numero" placeholder="Digite o Número">
+                                                </div>      
+                                                <div class="form-group col-sm-2">
+                                                    <label for="status">* Status</label>
+                                                    <input type="text"  maxlength="1" name="status" class="form-control" id="status" placeholder="Status ( 1 ou 0 )"required>                                            
+                                                </div>     
+
+                                                <div class="form-group col-sm-12">
+                                                    <label for="observacoes" >Observações Importantes</label>
+                                                    <textarea type="text" maxlength="300" name="observacoes" class="form-control" id="observacoes" rows="4"></textarea>
+                                                </div>                                                                                                                                                                                                                                                                     
                                             </div>      
 
                                             <!--Checkbox de grupos-->                                                                                  
@@ -110,5 +135,15 @@
                         </div>
                     </div>
                 </div>  
-            </div>        
+            </div>    
+        </div>       
+        
+        @section('scripts')              
+            <script>              
+                $(document).ready(function()
+                {                   
+                    $('#telefone').mask('(00) 00000-0000');                                                                               
+                });
+            </script>     
+        @endsection
    @endsection

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCadastroGeraisTable extends Migration
+class CreateCadastroPessoasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,23 +13,25 @@ class CreateCadastroGeraisTable extends Migration
      */
     public function up()
     {
-        Schema::create('cadastro_gerais', function (Blueprint $table) {
+        Schema::create('cadastro_pessoas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('area_id')->nullable();
             $table->foreign('area_id')->references('id')->on('areas');            
             $table->unsignedBigInteger('congregacao_id')->nullable();
-            $table->foreign('congregacao_id')->references('id')->on('congregacoes'); 
+            $table->foreign('congregacao_id')->references('id')->on('congregacoes');             
             $table->unsignedBigInteger('funcao_eclesiastica_id')->nullable();
-            $table->foreign('funcao_eclesiastica_id')->references('id')->on('funcao_eclesiasticas');       
+            $table->foreign('funcao_eclesiastica_id')->references('id')->on('funcao_eclesiasticas');                                                            
             $table->string('nome'); 
             $table->string('contato')->nullable();  
             $table->string('email')->nullable();                                  
             $table->string('numero_cartao_membro')->unique(); 
-            $table->string('endereco')->nullable();                                    
-            $table->string('observacoes')->nullable(); 
-            $table->string('status')->nullable();  
+            $table->string('endereco')->nullable();       
+            $table->integer('numero')->nullable();        
+            $table->string('status')->nullable();                             
+            $table->string('observacoes')->nullable();              
             $table->timestamps();
         });
+
     }
 
     /**
@@ -39,6 +41,6 @@ class CreateCadastroGeraisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cadastro_gerais');
+        Schema::dropIfExists('cadastro_pessoas');
     }
 }
