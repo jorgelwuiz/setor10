@@ -43,7 +43,7 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-              <table id="example3" class="table table-bordered table-striped dataTable dtr-inline">                        
+              <table id="example1" class="table table-bordered table-striped dataTable dtr-inline">                        
                 <thead>
                   <tr>
                     <th>Nome</th>
@@ -86,7 +86,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">
-                <i class="nav-icon fas fa-edit"></i> Editar Contato
+                <i class="nav-icon oi oi-pencil"></i> Editar Contato
               </h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                 <span aria-hidden="true">&times;</span>
@@ -124,20 +124,21 @@
       
     @section('scripts')
       <script>
-          $(function () {
-              $("#example1").DataTable({
-              "responsive": true,
-              "autoWidth": false,
-              });
-              $('#example2').DataTable({
-              "paging": true,
-              "lengthChange": false,
-              "searching": false,
-              "ordering": true,
-              "info": true,
-              "autoWidth": false,
-              "responsive": true,
-              });              
+        $(function () 
+          {
+            $("#example1").DataTable({
+            "responsive": true,
+            "autoWidth": false,
+            });
+            $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+            });              
           });
       </script>
       <script>
