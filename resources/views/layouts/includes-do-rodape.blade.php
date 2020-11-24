@@ -49,6 +49,6 @@
     <div class="float-right d-none d-sm-block">
       <b>Setor 10 |</b> Jaboatão
     </div>
-    <strong>&copy; 2019-2020  <a href="https://www.ieadpeplay.org.br" target="_blank">IEADPE</a></strong>
+    <strong>&copy; 2019-2020 | Igreja Evangelica Assembleia de Deus em Pernambuco / <a href="https://www.ieadpeplay.org.br" target="_blank">IEADPE</a></strong>
   </footer>
 </div>

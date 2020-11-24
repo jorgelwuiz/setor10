@@ -29,7 +29,7 @@
                                             <div class="row">
                                                 <div class="form-group col-sm-2">                                                
                                                     <label for="area">Área</label>                                                
-                                                    <select type="text" name="area" class="form-control" id="area" aria-describedby="area" placeholder="Ex: 1" required>  
+                                                    <select type="text" name="area_id" class="form-control" id="area_id" aria-describedby="area" placeholder="Ex: 1" required>  
                                                         <option value="">Área</option>
                                                             @foreach($areas as $item)                                              
                                                                 <option value="{{$item->area}}">{{$item->area}}</option>
@@ -38,7 +38,7 @@
                                                 </div>    
                                                 <div class="form-group col-sm-6">
                                                     <label for="congregacao">Congregação</label>
-                                                    <select type="text" name="congregacao" class="form-control" id="congregacao" aria-describedby="congregacao" placeholder="Ex: Matriz" required>   
+                                                    <select type="text" name="congregacao_id" class="form-control" id="congregacao_id" aria-describedby="congregacao_id" placeholder="Ex: Matriz" required>   
                                                         <option value="">Selecione a congregação</option>
                                                             @foreach($congregacoes as $item)                                              
                                                                 <option value="{{$item->congregacao}}">{{$item->congregacao}}</option>
@@ -47,7 +47,7 @@
                                                 </div>
                                                 <div class="form-group col-sm-4">
                                                     <label for="funcao">Função Eclesiastica</label>
-                                                    <select type="text" name="funcao_eclesiastica" class="form-control" id="funcao_eclesiastica" aria-describedby="nome" placeholder="Ex: Presbítero" >                                                                                                            
+                                                    <select type="text" name="funcao_eclesiastica_id" class="form-control" id="funcao_eclesiastica_id" aria-describedby="nome" placeholder="Ex: Presbítero" >                                                                                                            
                                                             <option value="">Selecione a Função</option>
                                                             @foreach ($funcao_eclesiasticas as $funcao)
                                                                 <option value="{{$funcao->funcao_eclesiastica}}">{{$funcao->funcao_eclesiastica}}</option>
@@ -60,7 +60,7 @@
                                                 </div>      
                                                 <div class="form-group col-sm-2">
                                                     <label for="nome">Contato</label>
-                                                    <input type="text" name="telefone" class="form-control" id="telefone" aria-describedby="nome" placeholder="(81) 99999-3333" required>
+                                                    <input type="text" name="contato" class="form-control" id="telefone" aria-describedby="nome" placeholder="(81) 99999-3333" required>
                                                 </div>    
                                                 <div class="form-group col-sm-4">
                                                     <label for="cartao">Email</label>

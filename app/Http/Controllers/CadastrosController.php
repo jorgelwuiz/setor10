@@ -59,12 +59,17 @@ class CadastrosController extends Controller
     public function store(Request $request)
     {
         $cadastros = new cadastro_pessoas();
-        $cadastros->area_id = $request->idArea;
+        $cadastros->area_id = $request->area_id;
         $cadastros->congregacao_id = $request->congregacao_id;
+        $cadastros->funcao_eclesiastica_id = $request->funcao_eclesiastica_id;
         $cadastros->nome = $request->nome;
-        $cadastros->funcao_eclesiastica_id = $request->funcao_eclesiastica_id;      
-        $cadastros->evento_id = $request->evento_id;        
-        $cadastros->numero_cartao_membro = $request->numero_cartao_membro;           
+        $cadastros->contato = $request->contato;        
+        $cadastros->email = $request->email;
+        $cadastros->numero_cartao_membro = $request->numero_cartao_membro;      
+        $cadastros->endereco = $request->endereco ;        
+        $cadastros->numero = $request->numero;        
+        $cadastros->status = $request->status;        
+        $cadastros->observacoes = $request->observacoes;           
         dd($cadastros);
         $cadastros->save();
         
@@ -104,15 +109,19 @@ class CadastrosController extends Controller
     public function update(Request $request)
     {
         $cadastros = cadastro_pessoas::find($request->id);                    
-        $cadastros->area_id = $request->idArea;
+        $cadastros->area_id = $request->area_id;
         $cadastros->congregacao_id = $request->congregacao_id;
+        $cadastros->funcao_eclesiastica_id = $request->funcao_eclesiastica_id;
         $cadastros->nome = $request->nome;
-        $cadastros->funcao_eclesiastica_id = $request->funcao_eclesiastica_id;      
-        $cadastros->evento_id = $request->evento_id;        
-        $cadastros->numero_cartao_membro = $request->numero_cartao_membro;                
+        $cadastros->contato = $request->contato;        
+        $cadastros->email = $request->email;
+        $cadastros->numero_cartao_membro = $request->numero_cartao_membro;      
+        $cadastros->endereco = $request->endereco ;        
+        $cadastros->numero = $request->numero;        
+        $cadastros->status = $request->status;        
+        $cadastros->observacoes = $request->observacoes;                  
         $cadastros->save();
         
-
         return redirect('cadastro-geral-usuario');
 
     }
