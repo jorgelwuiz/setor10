@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\cadastro_gerais;
+use App\Models\cadastro_pessoas;
 use App\congregacoes;
 use App\funcao_eclesiasticas;
 
@@ -17,7 +17,7 @@ class ListagemController extends Controller
      */
     public function index()
     {
-        $cadastros = cadastro_gerais::all();
+        $cadastros = cadastro_pessoas::all();
         
         return view('Admin.listagem', compact('cadastros'));
     }

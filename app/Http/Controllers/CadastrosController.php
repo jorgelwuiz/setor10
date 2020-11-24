@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 use App\Models\funcao_eclesiasticas;
-use App\cadastro_gerais;
+use App\Models\cadastro_pessoas;
 use App\cadastros;
 use App\Models\areas;
 
@@ -25,7 +25,7 @@ class CadastrosController extends Controller
      //Index chamada Doutrina     
     public function index()
     {
-        $cadastros = cadastro_gerais::all();        
+        $cadastros = cadastro_pessoas::all();        
         $congregacoes = congregacoes::all();
         $funcao_eclesiasticas = funcao_eclesiasticas::all();
         $areas = areas::all();
@@ -58,7 +58,7 @@ class CadastrosController extends Controller
      */
     public function store(Request $request)
     {
-        $cadastros = new cadastro_gerais();
+        $cadastros = new cadastro_pessoas();
         $cadastros->area_id = $request->idArea;
         $cadastros->congregacao_id = $request->congregacao_id;
         $cadastros->nome = $request->nome;
@@ -103,7 +103,7 @@ class CadastrosController extends Controller
      */
     public function update(Request $request)
     {
-        $cadastros = geral_cadastros::find($request->id);                    
+        $cadastros = cadastro_pessoas::find($request->id);                    
         $cadastros->area_id = $request->idArea;
         $cadastros->congregacao_id = $request->congregacao_id;
         $cadastros->nome = $request->nome;
@@ -125,7 +125,7 @@ class CadastrosController extends Controller
      */
     public function destroy(Request $request)
     {
-        $cadastros = geral_cadastros::find($request->id);                    
+        $cadastros = cadastro_pessoas::find($request->id);                    
         $cadastros->delete();
 
         return redirect('cadastro-geral-usuario');

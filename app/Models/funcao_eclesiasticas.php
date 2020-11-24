@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class funcao_eclesiasticas extends Model
 {
-    protected $fillable = ['id','funcao_eclesiastica'];
+    protected $fillable = [
+        
+    'id',
+    'funcao_eclesiastica'];
 }
