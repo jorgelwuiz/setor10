@@ -42,6 +42,9 @@ class AgendaController extends Controller
         $agendas->telefone = $request->telefone;        
         $agendas->save();
 
+         //Mensagem cadastrar         
+         flash('Novo contato cadastrado com sucesso!')->success()->important();
+
         return redirect ('/agenda');
 
     }
@@ -83,6 +86,9 @@ class AgendaController extends Controller
         $agendas->telefone = $request->telefone;                
         $agendas->save();
 
+         //Mensagem atualizar
+         flash('Novo contato cadastrado com sucesso!')->warning()->important();
+
         return redirect ('/agenda');
     }
 
@@ -96,6 +102,11 @@ class AgendaController extends Controller
     {
         $agendas = agendas::find($request->id);
         $agendas->delete();
+
+        //Mensagem cadastrar
+        flash('Contato excluido com sucesso!')->error()->important();
+
+        //flash('Message')
         
         return redirect ('/agenda');
     }

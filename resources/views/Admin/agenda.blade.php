@@ -6,41 +6,68 @@
             <div class="row mb-2">
               <div class="col-sm-7">
                   <h1>Agenda</h1>
-              </div>     
-              <!--Formulário de cadastro de contatos (Agenda interna de funcionários)-->
-              <div class="float-right">
-                <form action="/cadastrar/contato" method="POST">       
-                  @csrf                 
-                  <div class="form-row align-items-center">
-                    <div class="col-sm-5">
-                      <label class="sr-only" for="inlineFormInput">Nome</label>
-                      <input type="text" class="form-control mb-1" name="nome" id="nome" placeholder="Nome" required>
-                    </div>
-                    <div class="col-sm-4">
-                      <label class="sr-only" for="inlineFormInputGroup">Telefone</label>
-                      <div class="input-group mb-1">
-                        <div class="input-group-prepend">
-                          <div class="input-group-text">Tel</div>
-                        </div>
-                        <input type="text" class="form-control" name="telefone" id="telefone" placeholder="(81) 99999-9999" required>
+              </div>    
+              <div class="actions">                                                                                                                
+                <div class="btn-group">                  
+                  <a class="btn btn-success btn-sm" href="javascript:;" data-toggle="modal" data-target="#exampleModalContato">                                                                                        
+                      <span class="fas fa-edit "></span> Cadastrar Contato                                                                                                   
+                  </a>                   
+                </div>                              
+              </div>                         
+            </div>
+          </div>
+          <!--Formulário de cadastro de contatos (Agenda interna de funcionários)-->
+          <div class="modal fade" id="exampleModalContato" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">                  
+                    <i class="fas fa-save"></i> Novo Contato
+                  </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form action="/cadastrar/contato" method="POST"> 
+                    @csrf                 
+                    <div class="form-row align-items-center">
+                      <div class="col-sm-5">
+                        <label class="sr-only" for="inlineFormInput">Nome</label>
+                        <input type="text" class="form-control mb-1" name="nome" id="nome" placeholder="Nome" required>
                       </div>
-                    </div>                          
-                    <div class="col-auto">
+                      <div class="col-sm-7">
+                        <label class="sr-only" for="inlineFormInputGroup">Telefone</label>
+                        <div class="input-group mb-1">
+                          <div class="input-group-prepend">
+                            <div class="input-group-text">Tel</div>
+                            <input type="text" class="form-control" name="telefone" id="telefone" placeholder="(81) 99999-9999" required>
+                          </div>                     
+                        </div>
+                      </div>                                            
+                    </div>              
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>          
                       <button type="submit" class="btn btn-success mb-1">
-                      <span class="oi oi-task"></span> Cadastrar
-                      </button>
+                        <span class="oi oi-task"></span> Salvar Contato
+                      </button>              
                     </div>
-                  </div>
-                </form>
-              </div>                                     
-            </div>                    
-          </div>                                                                                       
-        </section>                                  
-        <section class="content-fluid">
+                  </form>
+                </div>            
+              </div>
+            </div>
+          </div>                                                                                                     
+        </section>     
+        <div class="container">
+          <!-- ALERTA MENSAGEM -->
+            @include('flash::message')
+          <!-- ALERTA MENSAGEM -->          
+        </div>                             
+        <section class="content-fluid">                      
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title"><b>Listagem de Contatos</b></h3>              
-            </div>
+              <h3 class="card-title"><b>Listagem de Contatos</b></h3>                            
+            </div>            
             <!-- /.card-header -->
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped dataTable dtr-inline">                        
@@ -67,7 +94,7 @@
                             data-id="{{$agenda->id}}">             
                             <span class="oi oi-pencil"></span>                                            
                         </button>                    
-                        <!--Botão Deletar-->                                                                                          
+                        <!--Botão Deletar-->                                                                                                                  
                         <a href="deletar/contato/{{$agenda->id}}" class="btn btn-danger btn-sm" onClick="return confirm('DESEJA REALMENTE DELETAR ESTE CONTATO?')">
                             <span class="oi oi-trash"></span>
                         </a>         
@@ -86,7 +113,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">
-                <i class="nav-icon oi oi-pencil"></i> Editar Contato
+                <i class="nav-icon oi oi-pencil"></i>Editar Contato
               </h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                 <span aria-hidden="true">&times;</span>
@@ -157,12 +184,11 @@
                 modal.find('#id').val(id)
             })        
       </script>
-
       <script>
           $(document).ready(function()
           {                   
               $('#telefone').mask('(00) 00000-0000');                                                                               
           });
-      </script>     
+      </script>        
     @endsection
 @endsection
