@@ -5,12 +5,12 @@
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-7">
-                  <h1>Agenda</h1>
+                <h1>Agenda</h1>
               </div>    
               <div class="actions">                                                                                                                
                 <div class="btn-group">                  
                   <a class="btn btn-success btn-sm" href="javascript:;" data-toggle="modal" data-target="#exampleModalContato">                                                                                        
-                      <span class="fas fa-edit "></span> Cadastrar Contato                                                                                                   
+                    <span class="fas fa-edit "></span> Cadastrar Contato                                                                                                   
                   </a>                   
                 </div>                              
               </div>                         
@@ -49,7 +49,7 @@
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>          
                       <button type="submit" class="btn btn-success mb-1">
-                        <span class="oi oi-task"></span> Salvar Contato
+                        <span class="oi oi-task"></span> Salvar
                       </button>              
                     </div>
                   </form>

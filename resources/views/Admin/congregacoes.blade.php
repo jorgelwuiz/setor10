@@ -1,28 +1,61 @@
 @extends('layouts.sistema')
     @section('content')
-    <div class="content-wrapper">
-        <section class="content-header">
-          <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-7">
-                    <h1>Congregação</h1>
-                </div> 
-                <!--Formulário de cadastro de contatos (Agenda interna de funcionários)-->
-                <div class="float-right">
-                    <form action="/cadastrar/congregacao" method="POST">  
-                        @csrf                 
-                        <div class="form-row align-items-center">
-                            <div class="col-sm-8">
-                                <label class="sr-only" for="inlineFormInput">Nome</label>
-                                <input type="text" name="congregacao" class="form-control" id="congregacao" aria-describedby="congregacao" placeholder="Digite a Congregação!" required>
-                            </div>                                              
-                            <div class="col-auto">
-                                <button type="submit" class="btn btn-success mb-1">Cadastrar</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>                                        
-            </div>                                                                                                                      
+        <div class="content-wrapper">
+            <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-7">
+                        <h1>Congregações</h1>
+                    </div>    
+                    <div class="actions">                                                                                                                
+                        <div class="btn-group">                  
+                            <a class="btn btn-success btn-sm" href="javascript:;" data-toggle="modal" data-target="#exampleModalCongregacao">                                                                                        
+                                <span class="fas fa-edit "></span> Cadastrar Congregacao                                                                                               
+                            </a>                   
+                        </div>                              
+                    </div>                         
+                </div>
+            </div>
+            <!--Formulário de cadastro de contatos (Agenda interna de funcionários)-->
+            <div class="modal fade" id="exampleModalCongregacao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">                  
+                        <i class="fas fa-save"></i> Nova Congregação
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                        <div class="modal-body">
+                            <form action="/cadastrar/congregacao" method="POST">  
+                                @csrf                 
+                                <div class="form-row align-items-center">
+                                    <div class="col-sm-10">
+                                        <label class="sr-only" for="inlineFormInput">Nome</label>
+                                        <input type="text" name="congregacao" class="form-control" id="congregacao" aria-describedby="congregacao" placeholder="Digite a Congregação!" required>
+                                    </div>                                                                                                                                       
+                                </div>              
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                        Fechar
+                                    </button>          
+                                    <button type="submit" class="btn btn-success mb-1">
+                                        <span class="oi oi-task"></span> Salvar
+                                    </button>              
+                                </div>
+                            </form>
+                        </div>            
+                     </div>
+                </div>
+            </div>                                                                                                     
+            </section> 
+            <div class="container">
+                <!-- ALERTA MENSAGEM -->
+                    @include('flash::message')
+                <!-- ALERTA MENSAGEM -->          
+                </div>                                                                                                                        
             </section>                                 
             <section class="content">
                 <div class="card">

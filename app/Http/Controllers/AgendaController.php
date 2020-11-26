@@ -105,8 +105,6 @@ class AgendaController extends Controller
 
         //Mensagem cadastrar
         flash('Contato excluido com sucesso!')->error()->important();
-
-        //flash('Message')
         
         return redirect ('/agenda');
     }

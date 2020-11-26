@@ -43,6 +43,9 @@ class CongregacoesController extends Controller
         $congregacoes->congregacao = $request->congregacao;        
         $congregacoes->save();
 
+        //Mensagem cadastrar         
+        flash('Congregação cadastrado com sucesso!')->success()->important();
+
         return redirect('congregacao');
     }
 
@@ -78,6 +81,9 @@ class CongregacoesController extends Controller
     public function update(Request $request)
     {
         //
+
+        //Mensagem atualizar
+        flash('Novo contato cadastrado com sucesso!')->warning()->important();
     }
 
     /**
@@ -90,6 +96,9 @@ class CongregacoesController extends Controller
     {
         $congregacoes = congregacoes::find($request->id);
         $congregacoes->delete();
+
+        //Mensagem cadastrar
+        flash('Congregação excluida com sucesso!')->error()->important();
 
         return redirect ('congregacao');
 
