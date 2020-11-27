@@ -80,7 +80,10 @@ class CongregacoesController extends Controller
      */
     public function update(Request $request)
     {
-        //
+        $congregacoes = congregacoes::find($request->$id);
+        $congregacoes->congregacao = $request->congregacao;      
+        dd($congregacoes) ;
+        $congregacoes->save();
 
         //Mensagem atualizar
         flash('Novo contato cadastrado com sucesso!')->warning()->important();

@@ -24,17 +24,17 @@ Route::group(['middleware' => 'auth'], function (){
 
     Route::get('/dashboard', 'DashboardController@index');    
     Route::get('/eventos', 'EventosController@index');
-    Route::get('/listagem', 'ListagemController@index');    
-    
+    Route::get('/listagem', 'ListagemController@index');        
 
-        Route::get('/agenda', 'AgendaController@index');
-        Route::post('/cadastrar/contato', 'AgendaController@store');
-        Route::post('editarContato', 'AgendaController@update');
-        Route::get('/deletar/contato/{id}', 'AgendaController@destroy');
+    Route::get('/agenda', 'AgendaController@index');
+    Route::post('/cadastrar/contato', 'AgendaController@store');
+    Route::post('editarContato', 'AgendaController@update');
+    Route::get('/deletar/contato/{id}', 'AgendaController@destroy');
 
-        Route::get('/congregacao', 'CongregacoesController@index');
-        Route::post('/cadastrar/congregacao', 'CongregacoesController@store');
-        Route::get('/deletar/congregacao/{id}', 'CongregacoesController@destroy');
+    Route::get('/congregacao', 'CongregacoesController@index');
+    Route::post('/cadastrar/congregacao', 'CongregacoesController@store');
+    Route::PUT('editarCongregacao', 'CongregacoesController@update')->name('editar.congregacao');
+    Route::get('/deletar/congregacao/{id}', 'CongregacoesController@destroy');
     
     Route::get('/cadastro-geral-usuario', 'CadastrosController@index');
     Route::get('deletar/cadastro/geral/{id}','CadastrosController@destroy');

@@ -81,7 +81,6 @@ class AgendaController extends Controller
     public function update(Request $request)
     {
         $agendas = agendas::find($request->id);
-
         $agendas->nome = $request->nome;
         $agendas->telefone = $request->telefone;                
         $agendas->save();

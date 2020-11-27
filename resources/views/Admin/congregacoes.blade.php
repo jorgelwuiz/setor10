@@ -81,7 +81,7 @@
                                         <td class="text-center">    
                                             
                                             <!--Botão Editar-->    
-                                            <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#exampleModal"                                                                                               
+                                            <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#exampleModalLabelEdit"                                                                                               
                                                 data-congregacao="{{$congregacao->congregacao}}"                                                    
                                                 data-id="{{$congregacao->id}}">             
                                                 <span class="oi oi-pencil"></span>                                            
@@ -99,6 +99,40 @@
                     </div>
                 </div>                
             </section> 
+            <!--Formulário de cadastro de contatos (Agenda interna de funcionários)-->
+            <div class="modal fade" id="exampleModalLabelEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalEditarCongregacao" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalEditarCongregacao">                  
+                        <i class="fas fa-save"></i> Nova Congregação
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                        <div class="modal-body">
+                            <form action="{{ route ('editar.congregacao')}}" method="PUT">  
+                                @csrf                 
+                                <div class="form-row align-items-center">
+                                    <div class="col-sm-10">
+                                        <label class="sr-only" for="inlineFormInput">Nome</label>
+                                        <input type="text" name="congregacao" class="form-control" id="congregacao" aria-describedby="congregacao" placeholder="Digite a Congregação!" required>
+                                    </div>                                                                                                                                       
+                                </div>              
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                        Fechar
+                                    </button>          
+                                    <button type="submit" class="btn btn-success mb-1">
+                                        <span class="oi oi-task"></span> Salvar
+                                    </button>              
+                                </div>
+                            </form>
+                        </div>            
+                     </div>
+                </div>
+            </div>
         </div>  
     </div>   
 
@@ -119,6 +153,23 @@
                 "responsive": true,
                 });
             });
+        </script>
+
+        <script>
+            $('#exampleModalLabelEdit').on('show.bs.modal', function (event)
+            {
+                var button = $(event.relatedTarget)
+                var recipient = button.data('whatever')
+                var nome = button.data('congregacao')                                 
+                var id = button.data('id')
+
+                var modal = $(this)
+                modal.find('.modal-body input').val(recipient)
+
+                modal.find('#congregacao').val(nome)                                    
+                modal.find('#id').val(id)
+            }) 
+
         </script>
     @endsection
 @endsection
