@@ -33,7 +33,7 @@ Route::group(['middleware' => 'auth'], function (){
 
     Route::get('/congregacao', 'CongregacoesController@index');
     Route::post('/cadastrar/congregacao', 'CongregacoesController@store');
-    Route::PUT('editarCongregacao', 'CongregacoesController@update')->name('editar.congregacao');
+    Route::post('editarCongregacao', 'CongregacoesController@update')->name('editar.congregacao');
     Route::get('/deletar/congregacao/{id}', 'CongregacoesController@destroy');
     
     Route::get('/cadastro-geral-usuario', 'CadastrosController@index');

@@ -112,7 +112,7 @@
                     </button>
                     </div>
                         <div class="modal-body">
-                            <form action="{{ route ('editar.congregacao')}}" method="PUT">  
+                            <form action="{{ route ('editar.congregacao')}}" method="POST">  
                                 @csrf                 
                                 <div class="form-row align-items-center">
                                     <div class="col-sm-10">
