@@ -16,6 +16,18 @@
               </div>                         
             </div>
           </div>
+          <!--START ALERTA NO CADASTROS-->
+            @if($errors->any())                            
+                <div class="container">
+                    <div class="text-center alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)                                                
+                                {{$error}}                                            
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+            @endif 
           <!--Formulário de cadastro de contatos (Agenda interna de funcionários)-->
           <div class="modal fade" id="exampleModalContato" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">

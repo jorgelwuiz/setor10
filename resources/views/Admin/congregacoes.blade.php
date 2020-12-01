@@ -16,6 +16,18 @@
                     </div>                         
                 </div>
             </div>
+            <!--START ALERTA NO CADASTROS-->
+            @if($errors->any())                            
+                <div class="container">
+                    <div class="text-center alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)                                                
+                                {{$error}}                                            
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+            @endif 
             <!--Formulário de cadastro de contatos (Agenda interna de funcionários)-->
             <div class="modal fade" id="exampleModalCongregacao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -34,7 +46,7 @@
                                 <div class="form-row align-items-center">
                                     <div class="col-sm-10">
                                         <label class="sr-only" for="inlineFormInput">Nome</label>
-                                        <input type="text" name="congregacao" class="form-control" id="congregacao" aria-describedby="congregacao" placeholder="Digite a Congregação!" required>
+                                        <input type="text" name="congregacao" class="form-control" id="congregacao" aria-describedby="congregacao" placeholder="Digite a Congregação!">
                                     </div>                                                                                                                                       
                                 </div>              
                                 <div class="modal-footer">
@@ -55,7 +67,7 @@
                 <!-- ALERTA MENSAGEM -->
                     @include('flash::message')
                 <!-- ALERTA MENSAGEM -->          
-                </div>                                                                                                                        
+            </div>                                                                                                                        
             </section>                                 
             <section class="content">
                 <div class="card">
@@ -69,7 +81,8 @@
                                 <tr>
                                     <th>Nome</th>    
                                     <th>Data do Cadastro</th>                              
-                                    <th class="text-center">Ação</th>                                    
+                                    <th class="text-center">Detalhes</th>       
+                                    <th class="text-center">Ação</th>                               
                                 </tr>
                             </thead>
                             <tbody>
@@ -78,6 +91,12 @@
                                         <td>{{$congregacao->congregacao }}</td>    
                                         <td>{{$congregacao->created_at }}</td>                                                            
 
+                                        <td class="text-center">    
+                                            <button type="button" class="btn btn-info btn-sm">
+                                                <span class="oi oi-eye"></span>
+                                            </button>                                           
+                                        </td>
+                                        
                                         <td class="text-center">    
                                             
                                             <!--Botão Editar-->    
@@ -117,7 +136,7 @@
                                 <div class="form-row align-items-center">
                                     <div class="col-sm-10">
                                         <label class="sr-only" for="inlineFormInput">Nome</label>
-                                        <input type="text" name="congregacao" class="form-control" id="congregacao" aria-describedby="congregacao" placeholder="Digite a Congregação!" required>
+                                        <input type="text" name="congregacao" class="form-control" id="congregacao" aria-describedby="congregacao" placeholder="Digite a Congregação!" >
                                     </div>                                                                                                                                       
                                 </div>              
                                 <div class="modal-footer">
