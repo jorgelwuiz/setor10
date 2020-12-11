@@ -97,14 +97,11 @@
                     </ul>
                 </li>
 
-                <li class="nav-item">
-                    <a href="/agenda" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>Agenda                    
-                </li>
-                
-                                                                                                         
                 <li class="nav-header">REGISTRO DE FREQUENCIAS</li>
+
                 <li class="nav-item">
+
+                   
                     <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Doutrina</p>
