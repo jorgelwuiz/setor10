@@ -6,9 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class agendas extends Model
 {
-    protected $fillable = [
-    
-    'id', 
-    'nome', 
-    'telefone'];
+    protected $fillable = ['id', 'nome', 'telefone'];
 }
