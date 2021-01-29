@@ -82,7 +82,6 @@
                                                     <label for="status">* Status</label>
                                                     <input type="text"  maxlength="1" name="status" class="form-control" id="status" placeholder="Status ( 1 ou 0 )"required>                                            
                                                 </div>     
-
                                                 <div class="form-group col-sm-12">
                                                     <label for="observacoes" >Observações Importantes</label>
                                                     <textarea type="text" maxlength="300" name="observacoes" class="form-control" id="observacoes" rows="4"></textarea>
