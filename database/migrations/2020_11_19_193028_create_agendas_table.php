@@ -17,6 +17,7 @@ class CreateAgendasTable extends Migration
             $table->bigIncrements('id');
             $table->string('nome');
             $table->string('telefone');
+            $table->string('informacoes');
             $table->timestamps();
         });
     }
@@ -30,4 +31,5 @@ class CreateAgendasTable extends Migration
     {
         Schema::dropIfExists('agendas');
     }
+    
 }

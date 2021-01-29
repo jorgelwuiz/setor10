@@ -39,7 +39,9 @@ class AgendaController extends Controller
     {
         $agendas = new agendas();
         $agendas->nome = $request->nome;
-        $agendas->telefone = $request->telefone;        
+        $agendas->telefone = $request->telefone;   
+        $agendas->informacoes = $request->informacoes;    
+        //dd($agendas);    
         $agendas->save();
 
          //Mensagem cadastrar         

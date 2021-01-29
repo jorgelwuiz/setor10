@@ -47,7 +47,7 @@
                       <div class="col-sm-5">
                         <label class="sr-only" for="inlineFormInput">Nome</label>
                         <input type="text" class="form-control mb-1" name="nome" id="nome" placeholder="Nome" required>
-                      </div>
+                      </div>                      
                       <div class="col-sm-7">
                         <label class="sr-only" for="inlineFormInputGroup">Telefone</label>
                         <div class="input-group mb-1">
@@ -56,7 +56,11 @@
                             <input type="text" class="form-control" name="telefone" id="telefone" placeholder="(81) 99999-9999" required>
                           </div>                     
                         </div>
-                      </div>                                            
+                      </div><br><br>  
+                      <div class="form-group shadow-textarea col-sm-8">                      
+                        <label for="exampleFormControlTextarea6">Informações</label>
+                        <textarea id="informacoes" name="informacoes"class="form-control z-depth-2" id="exampleFormControlTextarea6" rows="3" placeholder="Digite informações básicas..."></textarea>
+                      </div>                                                                                    
                     </div>              
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>          
@@ -87,6 +91,7 @@
                   <tr>
                     <th>Nome</th>
                     <th>Telefone</th>   
+                    <th>Informacões</th>   
                     <th>Data do Cadastro</th>     
                     <th class="text-center">Ação</th>                                                         
                   </tr>
@@ -95,7 +100,8 @@
                   @foreach($agendas as $agenda)
                     <tr>                                
                       <td>{{$agenda->nome}}</td>                                                             
-                      <td>{{$agenda->telefone}}</td>    
+                      <td>{{$agenda->telefone}}</td>   
+                      <td>{{$agenda->informacoes}}</td>   
                       <td>{{date("d/m/Y H:i:s", strtotime ($agenda->created_at)) }}</td>   
 
                       <td class="text-center"> 
