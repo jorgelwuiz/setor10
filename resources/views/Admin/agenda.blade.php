@@ -30,7 +30,7 @@
             @endif 
           <!--Formulário de cadastro de contatos (Agenda interna de funcionários)-->
           <div class="modal fade" id="exampleModalContato" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-lg" role="document">
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLabel">                  
@@ -44,11 +44,11 @@
                   <form action="/cadastrar/contato" method="POST"> 
                     @csrf                 
                     <div class="form-row align-items-center">
-                      <div class="col-sm-5">
+                      <div class="col-sm-6">
                         <label class="sr-only" for="inlineFormInput">Nome</label>
                         <input type="text" class="form-control mb-1" name="nome" id="nome" placeholder="Nome" required>
                       </div>                      
-                      <div class="col-sm-7">
+                      <div class="col-sm-6">
                         <label class="sr-only" for="inlineFormInputGroup">Telefone</label>
                         <div class="input-group mb-1">
                           <div class="input-group-prepend">
@@ -57,7 +57,7 @@
                           </div>                     
                         </div>
                       </div><br><br>  
-                      <div class="form-group shadow-textarea col-sm-8">                      
+                      <div class="form-group shadow-textarea col-sm-10">                      
                         <label for="exampleFormControlTextarea6">Informações</label>
                         <textarea id="informacoes" name="informacoes"class="form-control z-depth-2" id="exampleFormControlTextarea6" rows="3" placeholder="Digite informações básicas..."></textarea>
                       </div>                                                                                    
@@ -109,6 +109,7 @@
                         <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#exampleModal"                                                                                               
                             data-nome="{{$agenda->nome}}"                                                    
                             data-telefone="{{$agenda->telefone}}"  
+                            data-informacoes="{{$agenda->informacoes}}"  
                             data-id="{{$agenda->id}}">             
                             <span class="oi oi-pencil"></span>                                            
                         </button>                    
@@ -127,7 +128,7 @@
       </div>
       <!-- Modal Editar -->
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">
@@ -141,11 +142,11 @@
               <form action="editarContato" method="POST">       
                 @csrf                 
                 <div class="form-row align-items-center">
-                  <div class="col-sm-5">
+                  <div class="col-sm-6">
                     <label class="sr-only" for="inlineFormInput">Nome</label>
                     <input type="text" class="form-control mb-1" name="nome" id="nome" placeholder="Nome" required>
                   </div>
-                  <div class="col-sm-7">
+                  <div class="col-sm-6">
                     <label class="sr-only" for="inlineFormInputGroup">Telefone</label>
                     <div class="input-group mb-1">
                       <div class="input-group-prepend">
@@ -153,7 +154,11 @@
                         <input type="text" class="form-control" name="telefone" id="telefone" placeholder="(81) 99999-9999" required>
                       </div>                     
                     </div>
-                  </div>                                            
+                  </div> 
+                  <div class="form-group shadow-textarea col-sm-10">                      
+                        <label for="exampleFormControlTextarea6">Informações</label>
+                        <textarea id="informacoes" name="informacoes"class="form-control z-depth-2" id="exampleFormControlTextarea6" rows="3" placeholder="Digite informações básicas..."></textarea>
+                      </div>                                            
                 </div>              
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>          
@@ -191,14 +196,16 @@
                 var button = $(event.relatedTarget)
                 var recipient = button.data('whatever')
                 var nome = button.data('nome')
-                var telefone = button.data('telefone')                    
+                var telefone = button.data('telefone')    
+                var informacoes = button.data('informacoes')                     
                 var id = button.data('id')
 
                 var modal = $(this)
                 modal.find('.modal-body input').val(recipient)
 
                 modal.find('#nome').val(nome)
-                modal.find('#telefone').val(telefone)                       
+                modal.find('#telefone').val(telefone) 
+                modal.find('#informacoes').val(informacoes)                       
                 modal.find('#id').val(id)
             })        
       </script>
