@@ -91,7 +91,7 @@
                   <tr>
                     <th>Nome</th>
                     <th>Telefone</th>   
-                    <th>Informacões do teste</th>   
+                    <th>Informacões do Contato</th>   
                     <th>Data do Cadastro</th>     
                     <th class="text-center">Ação</th>                                                         
                   </tr>
