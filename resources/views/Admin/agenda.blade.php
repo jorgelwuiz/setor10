@@ -59,7 +59,7 @@
                       </div><br><br>  
                       <div class="form-group shadow-textarea col-sm-8">                      
                         <label for="exampleFormControlTextarea6">Informações</label>
-                        <textarea id="informacoes" name="informacoes"class="form-control z-depth-2" id="exampleFormControlTextarea6" rows="3" placeholder="Digite informações básicas..."></textarea>
+                        <textarea id="informacoes" name="informacoes"class="form-control z-depth-2" id="exampleFormControlTextarea6" rows="3" placeholder="Digite informações básicas para este contato!"></textarea>
                       </div>                                                                                    
                     </div>              
                     <div class="modal-footer">
@@ -91,7 +91,7 @@
                   <tr>
                     <th>Nome</th>
                     <th>Telefone</th>   
-                    <th>Informacões</th>   
+                    <th>Informacões do Contato</th>   
                     <th>Data do Cadastro</th>     
                     <th class="text-center">Ação</th>                                                         
                   </tr>
