@@ -27,7 +27,7 @@ class CreateCadastroPessoasTable extends Migration
             $table->string('numero_cartao_membro')->unique(); 
             $table->string('endereco')->nullable();       
             $table->integer('numero')->nullable();        
-            $table->string('status')->nullable();                             
+            $table->string('status')->nullable();                                        
             $table->string('observacoes')->nullable();              
             $table->timestamps();
         });

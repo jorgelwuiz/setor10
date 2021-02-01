@@ -24,7 +24,7 @@ Route::group(['middleware' => 'auth'], function (){
 
     Route::get('/dashboard', 'DashboardController@index');    
     Route::get('/eventos', 'EventosController@index');
-    Route::get('/listagem', 'ListagemController@index');        
+    Route::get('/listagem', 'ListagemController@index')->name('listegem.geral.cadastro');        
 
     Route::get('/agenda', 'AgendaController@index');
     Route::post('/cadastrar/contato', 'AgendaController@store');
@@ -43,6 +43,9 @@ Route::group(['middleware' => 'auth'], function (){
 
     Route::get('/chamadas/congresso-de-mulheres', 'CadastrosController@indexMulheres')->name('presencas.mulheres.confirmar');
     Route::post('confirmarpresenca', 'presencasController@store');
+
+    //função
+    Route::get('/cadastrar/funcao', 'FuncoesController@store');
 
     //Metodo create, cadastrar, atualiza e deletar.
     Route::get('/cadastrar-usuario', 'CadastrosController@create');
