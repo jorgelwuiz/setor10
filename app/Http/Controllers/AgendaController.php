@@ -84,7 +84,8 @@ class AgendaController extends Controller
     {
         $agendas = agendas::find($request->id);
         $agendas->nome = $request->nome;
-        $agendas->telefone = $request->telefone;                
+        $agendas->telefone = $request->telefone; 
+        $agendas->informacoes = $request->informacoes;                
         $agendas->save();
 
          //Mensagem atualizar
