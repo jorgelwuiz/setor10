@@ -25,7 +25,7 @@ class StoreUpdateCongregacaoRequest extends FormRequest
     {
         return 
             [                        
-                'congregacao'=> 'required|min:1|max:255',                  
+                'congregacao'=> 'required|min:3',                  
             ];        
     }
 
@@ -34,7 +34,7 @@ class StoreUpdateCongregacaoRequest extends FormRequest
     {
         return
             [                        
-                'congregacao.required' => 'Campo (Congregacao) é obrigatório!',                             
+                'congregacao.required' => 'O campo :attribute é obrigatório!',                             
             ];
             
     }

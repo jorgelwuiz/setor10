@@ -109,9 +109,8 @@
 
       <div class="social-auth-links text-center">
         <p></p>        
-        <a href="/" class="btn btn-block btn-danger">
-          <span class="oi oi-action-undo"></span>
-          Voltar
+        <a href="/" class="btn btn-block btn-danger">          
+          <label for="inicio">Inicio</label> 
         </a>
       </div>
 
