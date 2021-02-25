@@ -6,9 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\cadastro_pessoas;
 
 class congregacoes extends Model
-{
-    protected $primaryKey = 'id';
-
+{   
     protected $fillable = ['id', 'congregacao'];
     
     //relacionamento congregação
