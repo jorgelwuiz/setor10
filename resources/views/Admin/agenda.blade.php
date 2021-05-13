@@ -74,11 +74,7 @@
             </div>
           </div>                                                                                                     
         </section>     
-        <div class="container">
-          <!-- ALERTA MENSAGEM -->
-            @include('flash::message')
-          <!-- ALERTA MENSAGEM -->          
-        </div>                             
+                                    
         <section class="content-fluid">                      
           <div class="card">
             <div class="card-header">
